@@ -213,7 +213,8 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
-      <bpmn2:script>System.out.println(&quot;Datos enviados al backend:&quot;+rrspuestaValidacion2);</bpmn2:script>
+      <bpmn2:script>String version = System.getProperty(&quot;java.version&quot;);
+System.out.println(&quot;Datos enviados al backend:&quot;+rrspuestaValidacion2+&quot;, Java version:&quot;+version);</bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:sequenceFlow id="SequenceFlow_8" tns:priority="1" sourceRef="ScriptTask_1" targetRef="EndEvent_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_9" tns:priority="1" sourceRef="UserTask_2" targetRef="ScriptTask_1"/>
